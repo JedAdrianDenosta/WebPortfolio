@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="Logo Icon" href="img/Logo.png" />
+  <link rel="stylesheet" href="public/css/tailwind.css">
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <title>Jed Adrian's Portfolio</title>
+</head>
+
+<body>
+  <div class="bg-white texture-bg" style="color: #333333; scroll-behavior: smooth">
+    <canvas class="connecting-dots"></canvas>
+    <!--Blob Image-->
+    <img src="img/Blob.svg" alt="" class="absolute max-w-screen-md w-10/12 -top-40 -right-0" style="z-index: 0" />
+    <!--Main Body-->
+    <div class="p-14 sm:p-20 lg:px-32 bg-white texture-bg">
+      <!--Nav Bar-->
+      <div class="w-full relative" style="color: #333333; z-index: 50">
+        <div x-data="{ open: false }" class="
+              flex flex-col
+              justify-between
+              content-center
+              max-w-screen-xl
+              mx-auto
+              md:items-center md:justify-between md:flex-row
+            ">
+          <div class="flex flex-row items-center justify-between">
+            <a href="landingPage.html" class="
+                  text-3xl
+                  font-bold
+                  tracking-widest
+                  text-gray-900
+                  rounded-lg
+                  focus:outline-none focus:shadow-outline
+                  no-underline
+                  mb-4
+                  lg:text-4xl
+                  w-48
+                  lg:w-auto
+                " style="color: #5ed8fa">jed adrian</a>
+            <button class="
+                  md:hidden
+                  rounded-lg
+                  focus:outline-none focus:shadow-outline
+                " @click="open = !open">
+              <svg fill="currentColor" viewBox="0 0 20 20" class="w-8 h-8 mb-4">
+                <path x-show="!open" fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                  clip-rule="evenodd"></path>
+                <path x-show="open" fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </div>
+          <nav :class="{'flex': open, 'hidden': !open}" class="
+                flex-col
+                justify-end
+                align-middle
+                flex-grow
+                md:pb-0
+                hidden
+                md:flex md:justify-end md:flex-row
+                space-y-6
+                md:space-y-0 md:
+                lg:
+                space-x-20
+                mb-4
+              ">
+            <a class="
+                  flex
+                  justify-end
+                  items-end
+                  text-lg
+                  font-semibold
+                  bg-transparent
+                  rounded-lg
+                  hover:text-gray-900
+                  focus:text-gray-900
+                  hover:bg-gray-200
+                  focus:bg-gray-200 focus:outline-none focus:shadow-outline
+                  no-underline
+                  lg:text-xl
+                " style="color: #333333" href="#home">Home</a>
+            <a class="
+                  flex
+                  justify-end
+                  text-lg
+                  font-semibold
+                  bg-transparent
+                  rounded-lg
+                  hover:text-gray-900
+                  focus:text-gray-900
+                  hover:bg-gray-200
+                  focus:bg-gray-200 focus:outline-none focus:shadow-outline
+                  no-underline
+                  lg:text-xl
+                " style="color: #333333" href="#skills">Skills</a>
+            <a class="
+                  flex
+                  justify-end
+                  text-lg
+                  font-semibold
+                  bg-transparent
+                  rounded-lg
+                  hover:text-gray-900
+                  focus:text-gray-900
+                  hover:bg-gray-200
+                  focus:bg-gray-200 focus:outline-none focus:shadow-outline
+                  no-underline
+                  lg:text-xl
+                " style="color: #333333" href="#portfolio">Portfolio</a>
+            <a class="
+                  flex
+                  justify-end
+                  text-lg
+                  font-semibold
+                  bg-transparent
+                  rounded-lg
+                  hover:text-gray-900
+                  focus:text-gray-900
+                  hover:bg-gray-200
+                  focus:bg-gray-200 focus:outline-none focus:shadow-outline
+                  no-underline
+                  lg:text-xl
+                " style="color: #333333" href="about.html">About</a>
+            <div @click.away="open = false" class="relative" x-data="{ open: false }"></div>
+          </nav>
+        </div>
+      </div>
+      <!--First Section-->
+      <section id="home" class="lg:pt-10 lg:pb-16">
+        <div class="flex justify-center texture-bg">
+          <div class="
+                sm:grid sm:grid-cols-2
+                content-start
+                justify-start
+                gap-32
+                sm:gap-10
+                md:gap-16
+              " style="color: #262961">
+            <div class="
+                  flex flex-col
+                  justify-around
+                  space-y-8
+                  mt-4
+                  lg:space-y-0
+                  relative
+                ">
+              <h1 class="
+                    text-6xl
+                    flex
+                    justify-start
+                    font-bold
+                    tracking-wider
+                    md:text-7xl
+                    lg:text-8xl
+                  " style="z-index: 30">
+                Hello&#128075;<br />I'm Jed!
+              </h1>
+              <h3 class="
+                    text-lg
+                    font-normal
+                    leading-relaxed
+                    md:text-xl
+                    lg:text-2xl
+                  " style="z-index: 30">
+                Photographer <br />
+                UX and UI Designer <br />
+                Web Designer and Developer
+              </h3>
+              <button class="
+                    p-2
+                    text-white text-base
+                    font-semibold
+                    rounded-full
+                    md:animate-bounce
+                    w-32
+                    md:text-lg md:w-36
+                    lg:mt-10
+                  " style="background: #7876f7; z-index: 30">
+                <a href="#skills" class="no-underline text-white">
+                  Get in touch
+                </a>
+              </button>
+            </div>
+            <div class="mt-6 flex items-center" style="z-index: 30">
+              <img src="img/Saly-13.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!--Second Section-->
+    <section id="skills" class="p-12 sm:p-20 lg:px-32 lg:py-28" style="background: #eeeffe">
+      <div class="flex flex-col justify-center py-4">
+        <h1 class="text-4xl font-bold mb-10" style="color: #262961">
+          Here are my skills...
+        </h1>
+        <div class="flex flex-row justify-center">
+          <div class="grid grid-row-3 gap-20 lg:grid lg:grid-cols-3 lg:gap-20">
+            <!--Photography-->
+            <div class="flex flex-col space-y-4 p-4 shadow-xl md:shadow-2xl" style="
+                  background: linear-gradient(
+                    118.32deg,
+                    rgba(255, 255, 255, 0.42) 0%,
+                    rgba(255, 255, 255, 0.06) 100%
+                  );
+                  backdrop-filter: blur(100px);
+                  border-radius: 16px;
+                ">
+              <img class="w-80" src="img/Photography.svg" alt="" />
+              <div class="flex flex-row justify-start">
+                <h1 class="font-bold text-xl md:text-2xl">Photography</h1>
+              </div>
+              <div class="flex flex-row justify-start">
+                <p class="text-sm w-64 text-justify lg:text-base lg:w-80">
+                  I am a student Photographer, founder of DC Portraitures. Aim
+                  to bring smile in your face at your best moment.
+                </p>
+              </div>
+              <button class="
+                    p-2
+                    text-white text-base
+                    font-semibold
+                    rounded-full
+                    w-32
+                    cursor-not-allowed
+                    filter
+                    drop-shadow-lg
+                    transition
+                    duration-300
+                    ease-in-out
+                    transform
+                    hover:-translate-y-1 hover:scale-110
+                  " style="background: #7876f7">
+                <a href="#" class="no-underline text-white">Learn More</a>
+              </button>
+            </div>
+            <!--UX and UI Design-->
+            <div class="
+                  flex flex-col
+                  space-y-4
+                  p-4
+                  md:p-5
+                  shadow-xl
+                  md:shadow-2xl
+                " style="
+                  background: linear-gradient(
+                    118.32deg,
+                    rgba(255, 255, 255, 0.42) 0%,
+                    rgba(255, 255, 255, 0.06) 100%
+                  );
+                  backdrop-filter: blur(100px);
+                  border-radius: 16px;
+                ">
+              <img class="w-80" src="img/UX:UI.svg" alt="" />
+              <div class="flex flex-row justify-start">
+                <h1 class="font-bold text-xl md:text-2xl">
+                  UX and UI Design
+                </h1>
+              </div>
+              <div class="flex flex-row justify-start">
+                <p class="text-sm w-64 text-justify lg:text-base lg:w-80">
+                  I am an aspiring UX and UI Designer that promotes better
+                  user experience and quality to users.
+                </p>
+              </div>
+              <button class="
+                    p-2
+                    text-white text-base
+                    font-semibold
+                    rounded-full
+                    w-32
+                    cursor-not-allowed
+                    filter
+                    drop-shadow-lg
+                    transition
+                    duration-300
+                    ease-in-out
+                    transform
+                    hover:-translate-y-1 hover:scale-110
+                  " style="background: #7876f7">
+                <a href="#" class="no-underline text-white">Learn More</a>
+              </button>
+            </div>
+            <!--Web Development-->
+            <div class="flex flex-col space-y-4 p-4 shadow-xl md:shadow-2xl" style="
+                  background: linear-gradient(
+                    118.32deg,
+                    rgba(255, 255, 255, 0.42) 0%,
+                    rgba(255, 255, 255, 0.06) 100%
+                  );
+                  backdrop-filter: blur(100px);
+                  border-radius: 16px;
+                ">
+              <img class="w-80" src="img/WebDev.svg" alt="" />
+              <div class="flex flex-row justify-start">
+                <h1 class="font-bold text-xl md:text-2xl">
+                  UX and UI Design
+                </h1>
+              </div>
+              <div class="flex flex-row justify-start">
+                <p class="text-sm w-64 text-justify lg:text-base lg:w-80">
+                  An aspiring student web developer that aims to bring quality
+                  assurance to clients and easy user-experience.
+                </p>
+              </div>
+              <button class="
+                    p-2
+                    text-white text-base
+                    font-semibold
+                    rounded-full
+                    w-32
+                    cursor-not-allowed
+                    filter
+                    drop-shadow-lg
+                    transition
+                    duration-300
+                    ease-in-out
+                    transform
+                    hover:-translate-y-1 hover:scale-110
+                  " style="background: #7876f7">
+                <a href="#" class="no-underline text-white">Learn More</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Third Section-->
+    <section id="portfolio" class="bg-white texture-bg p-14 sm:p-20 lg:px-32 lg:gap-16">
+      <h1 class="text-4xl font-bold mb-10" style="color: #262961">
+        My portfolio...
+      </h1>
+      <div class="lg:grid lg:grid-row-2 lg:gap-20 lg:px-20 lg:py-10">
+        <!--First Portfolio-->
+        <div class="lg:grid lg:grid-cols-2 lg:gap-20">
+          <div class="
+                shadow-2xl
+                rounded-xl
+                text-white
+                w-auto
+                p-6
+                md:p-10 md:px-14
+              " style="background: #7876f7">
+            <h1 clh1ss="text-3xl tracking-wide font-bold no-underline text-white lg: text-4xl ">
+              Pollice
+            </h1>
+            <p class="
+                  text-xs text-justify
+                  font-light
+                  tracking-wider
+                  leading-normal
+                  md:text-sm
+                  lg:text-sm
+                ">
+              Pollice is an application that aims to provide an all-in-one
+              means to voting, calculating, and displaying the results for
+              WVSU CICT's Student Council Election. The application is
+              designed using tailwind, allowing for a sleek look overall. It
+              also utilizes MongoDB to collect and store all ongoing data.
+            </p>
+            <div class="mt-4 grid grid-cols-2 gap-4">
+              <a href="http://www.pollice.ml/" class="
+                    no-underline
+                    text-sm
+                    font-semibold
+                    bg-white
+                    p-2
+                    rounded-full
+                    w-32
+                    flex
+                    justify-center
+                  " style="color: #7876f7">View Website</a>
+              <a href="https://github.com/JedAdrianDenosta/pollice" class="flex justify-end items-center text-white">
+                <svg class="w-7 h-7" style="color: white" viewBox="0 0 24 24" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z"
+                    fill="#2E3A59"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div id="carouselExampleCaptions" class="carousel slide py-4 flex items-center" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner rounded-sm md:rounded-xl">
+              <div class="carousel-item active">
+                <img src="img/2.PNG" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                  <!--Caption-->
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/4.PNG" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                  <!--Caption-->
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/5.PNG" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                  <!--Caption-->
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <!--Second Portfolio-->
+        <div class="lg:grid lg:grid-cols-2 lg:gap-20">
+          <div class="
+                shadow-2xl
+                rounded-xl
+                text-white
+                w-auto
+                p-6
+                md:p-10 md:px-14
+                lg:hidden
+              " style="background: #7876f7">
+            <h1 clh1ss="text-3xl tracking-wide font-bold no-underline text-white lg:text-8xl ">
+              DC Portraitures
+            </h1>
+            <p class="
+                  text-xs text-justify
+                  font-light
+                  tracking-wider
+                  leading-normal
+                  md:text-sm
+                  lg:text-sm
+                ">
+              DC Portraitures is an artist group that helps bring memories of
+              the clients to have golden times. The said group is composed of
+              aspiring Photographers, Make-up Artist, and Design Production
+              individuals. The group provides sound services to people.
+            </p>
+            <div class="mt-4 grid grid-cols-2 gap-4">
+              <a href="https://www.facebook.com/dcportraitures/?ref=pages_you_manage" class="
+                    no-underline
+                    text-sm
+                    font-semibold
+                    bg-white
+                    p-2
+                    rounded-full
+                    w-32
+                    flex
+                    justify-center
+                  " style="color: #7876f7">Check it out</a>
+              <a href="https://github.com/JedAdrianDenosta/pollice" class="flex justify-end items-center text-white">
+                <svg class="w-7 h-7" style="color: white" viewBox="0 0 24 24" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z"
+                    fill="#2E3A59"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div id="carouselExampleCaptions" class="carousel slide py-4 flex items-center" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner rounded-sm md:rounded-xl">
+              <div class="carousel-item active">
+                <img src="img/2.PNG" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                  <!--Caption-->
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/4.PNG" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                  <!--Caption-->
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/5.PNG" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                  <!--Caption-->
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="
+                shadow-2xl
+                rounded-xl
+                text-white
+                w-auto
+                p-6
+                md:p-10 md:px-14
+                hidden
+                lg:block
+              " style="background: #7876f7">
+            <h1 clh1ss="text-3xl tracking-wide font-bold no-underline text-white lg:text-8xl ">
+              DC Portraitures
+            </h1>
+            <p class="
+                  text-xs text-justify
+                  font-light
+                  tracking-wider
+                  leading-normal
+                  md:text-sm
+                  lg:text-sm
+                ">
+              DC Portraitures is an artist group that helps bring memories of
+              the clients to have golden times. The said group is composed of
+              aspiring Photographers, Make-up Artist, and Design Production
+              individuals. The group provides sound services to people.
+            </p>
+            <div class="mt-4 grid grid-cols-2 gap-4">
+              <a href="https://www.facebook.com/dcportraitures/?ref=pages_you_manage" class="
+                    no-underline
+                    text-sm
+                    font-semibold
+                    bg-white
+                    p-2
+                    rounded-full
+                    w-32
+                    flex
+                    justify-center
+                  " style="color: #7876f7">Check it out</a>
+              <a href="https://github.com/JedAdrianDenosta/pollice" class="flex justify-end items-center text-white">
+                <svg class="w-7 h-7" style="color: white" viewBox="0 0 24 24" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z"
+                    fill="#2E3A59"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="
+        px-14
+        py-14
+        sm:p-20
+        bottom-0
+        lg:px-32 lg:flex lg:flex-col lg:justify-center
+      " style="background: #262961">
+    <div class="grid grid-row-3 gap-10 sm:grid-cols-3 sm:justify-items-center">
+      <!--Title and Social Media-->
+      <div class="w-auto">
+        <h1 class="text-3xl font-bold tracking-wider md:text-4xl" style="color: #5ed8fa">
+          jed adrian
+        </h1>
+        <!--Facebook-->
+        <div class="flex flex-row space-x-5">
+          <a href="https://www.facebook.com/jedadrian.denosta">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="#ffffff" class="bi bi-facebook"
+              viewBox="0 0 16 16">
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+            </svg>
+          </a>
+          <!--Instagram-->
+          <a href="https://www.instagram.com/jedadriannn/">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="#ffffff" class="bi bi-instagram"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+            </svg>
+          </a>
+          <a href="https://twitter.com/jedadriannn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="#ffffff" class="bi bi-twitter"
+              viewBox="0 0 16 16">
+              <path
+                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="text-white no-underline flex flex-col space-y-1">
+        <h1 class="text-sm font-light md:text-base" style="color: #cbc9c9">
+          Services
+        </h1>
+        <a href="" class="
+              text-base
+              md:text-lg
+              text-white
+              no-underline
+              cursor-not-allowed
+            ">
+          Photography
+        </a>
+        <a href="" class="
+              text-base
+              md:text-lg
+              text-white
+              no-underline
+              cursor-not-allowed
+            ">
+          UX and UI Design
+        </a>
+        <a href="" class="
+              text-base
+              md:text-lg
+              text-white
+              no-underline
+              cursor-not-allowed
+            ">
+          Web Development
+        </a>
+      </div>
+      <div class="text-white no-underline flex flex-col space-y-1">
+        <h1 class="text-sm font-light md:text-base" style="color: #cbc9c9">
+          More
+        </h1>
+        <a href="#portfolio" class="text-base md:text-lg text-white no-underline">
+          Portfolio
+        </a>
+        <a href="about.html" class="text-base md:text-lg text-white no-underline">
+          About
+        </a>
+      </div>
+    </div>
+    <div class="text-white no-underline pt-14 md:pt-24">
+      <div class="
+            text-base
+            md:text-lg
+            font-semibold
+            text-white
+            flex
+            justify-center
+          ">
+        &#169; 2021 Jed Adrian Denosta
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+  <script src="index.js"></script>
+</body>
+
+</html>
