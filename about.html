@@ -28,33 +28,35 @@
               mx-auto
               md:items-center md:justify-between md:flex-row
             ">
-          <div class="flex flex-row items-center justify-between">
-            <a href="landingPage.html" class="
-                  text-3xl
-                  font-bold
-                  tracking-widest
-                  text-gray-900
-                  rounded-lg
-                  focus:outline-none focus:shadow-outline
-                  no-underline
-                  mb-4
-                  lg:text-4xl
-                " style="color: #5ed8fa">jed adrian</a>
-            <button class="
-                  md:hidden
-                  rounded-lg
-                  focus:outline-none focus:shadow-outline
-                " @click="open = !open">
-              <svg fill="currentColor" viewBox="0 0 20 20" class="w-8 h-8 mb-4">
-                <path x-show="!open" fill-rule="evenodd"
-                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                  clip-rule="evenodd"></path>
-                <path x-show="open" fill-rule="evenodd"
-                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </button>
-          </div>
+            <div class="flex flex-row items-center justify-between">
+              <a href="index.html" class="
+                    text-3xl
+                    font-bold
+                    tracking-widest
+                    text-gray-900
+                    rounded-lg
+                    focus:outline-none focus:shadow-outline
+                    no-underline
+                    mb-4
+                    lg:text-4xl
+                    w-48
+                    lg:w-auto
+                  " style="color: #5ed8fa">jed adrian</a>
+              <button class="
+                    md:hidden
+                    rounded-lg
+                    focus:outline-none focus:shadow-outline
+                  " @click="open = !open">
+                <svg fill="currentColor" viewBox="0 0 20 20" class="w-8 h-8 mb-4">
+                  <path x-show="!open" fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                    clip-rule="evenodd"></path>
+                  <path x-show="open" fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+            </div>
           <nav :class="{'flex': open, 'hidden': !open}" class="
                 flex-col
                 justify-end
@@ -63,9 +65,8 @@
                 md:pb-0
                 hidden
                 md:flex md:justify-end md:flex-row
-                space-y-6 space-x-10
+                space-y-6
                 md:space-y-0 md:
-                space-x-16
                 lg:
                 space-x-20
                 mb-4
@@ -73,18 +74,19 @@
             <a class="
                   flex
                   justify-end
+                  items-end
                   text-lg
                   font-semibold
                   bg-transparent
                   rounded-lg
-                  hover:text-gray-900
+                  text-gray-700
+                  hover:text-indigo-300
                   focus:text-gray-900
-                  hover:bg-gray-200
+                  hover:bg-gray-700
                   focus:bg-gray-200 focus:outline-none focus:shadow-outline
                   no-underline
                   lg:text-xl
-                  smooth-scroll
-                " style="color: #333333" href="index.html">Home</a>
+                " href="index.html">Home</a>
             <a class="
                   flex
                   justify-end
@@ -92,13 +94,14 @@
                   font-semibold
                   bg-transparent
                   rounded-lg
-                  hover:text-gray-900
+                  text-gray-700
+                  hover:text-indigo-300
                   focus:text-gray-900
                   hover:bg-gray-200
                   focus:bg-gray-200 focus:outline-none focus:shadow-outline
                   no-underline
                   lg:text-xl
-                " style="color: #333333" href="index.html">Skills</a>
+                " href="index.html">Skills</a>
             <a class="
                   flex
                   justify-end
@@ -106,13 +109,14 @@
                   font-semibold
                   bg-transparent
                   rounded-lg
-                  hover:text-gray-900
+                  text-gray-700
+                  hover:text-indigo-300
                   focus:text-gray-900
                   hover:bg-gray-200
                   focus:bg-gray-200 focus:outline-none focus:shadow-outline
                   no-underline
                   lg:text-xl
-                " style="color: #333333" href="index.html">Portfolio</a>
+                " href="index.html">Portfolio</a>
             <a class="
                   flex
                   justify-end
@@ -120,43 +124,90 @@
                   font-semibold
                   bg-transparent
                   rounded-lg
-                  hover:text-gray-900
+                  text-gray-700
+                  hover:text-indigo-300
                   focus:text-gray-900
                   hover:bg-gray-200
                   focus:bg-gray-200 focus:outline-none focus:shadow-outline
                   no-underline
                   lg:text-xl
-                " style="color: #333333" href="#">About</a>
+                " href="#">About</a>
             <div @click.away="open = false" class="relative" x-data="{ open: false }"></div>
           </nav>
         </div>
       </div>
       <!--Back Button-->
-      <div>
-        <a href="index.html">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mt-8 group-hover:bg-red-600 md:h-12 md:w-12"
-            fill="none" viewBox="0 0 24 24" stroke="#333333">
+      <div class="flex items-end mx-auto py-6">
+        <a href="index.html" class="flex items-end no-underline justify-center group-hover:text-indigo-500" >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-700 hover:-rotate-90 hover:text-indigo-400 stroke-current stroke-2 md:h-12 md:w-12"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
           </svg>
         </a>
       </div>
       <!--Profile Section-->
-      <h1 class="flex justify-center pt-14 text-4xl font-bold md:pt-16 md:text-5xl relative" style="color: #262961;">
-        About me</h1>
-      <div class="grid grid-row-2 py-16 space-y-14 md:py-28 md:grid md:grid-cols-2 md:gap-20 md:space-y-0 relative">
-        <div class="relative flex justify-center items-center bg-center">
-          <img class="flex items-center rounded-md w-auto h-auto md:w-auto" src="img/myProfile.jpg" alt="">
+      <div class="grid grid-row-3 gap-5 py-6 md:py-10 md:grid md:grid-cols-3 m-auto w-auto">
+        <!--Picture and data-->
+        <div class="bg-white rounded-md md:rounded-2xl shadow-xl w-full h-full relative m-auto space-y-5 p-4 md:place-content-start">
+          <img class="rounded-xl" src="img/myProfile.jpg" alt="">
+          <h1 class="text-lg font-extrabold text-indigo-400">Jed Adrian Denosta</h1>
+          <p class="text-sm text-gray-500">Photographer / UX and UI Designer / Web Developer</p>
+          <p class="text-sm font-normal text-gray-600">
+            Jed believes that design must solve a need, stir a desire for involvement, and shed light on a path that is enjoyable, trustworthy, and human.
+          </p>
+          <p class="text-base font-medium text-gray-700">
+            Connect with him! You’ll find him contact details down below.
+          </p>
+          <p class="text-sm font-normal text-gray-600">
+            Email: <br> jedadrian.denosta@wvsu.edu.ph
+          </p>
+          <!--Social Media-->
+          <div class="flex flex-row space-x-5 py-3">
+            <a href="https://www.facebook.com/jedadrian.denosta" class="text-gray-500 hover:text-indigo-400 no-underline">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="currentColor"
+                class="bi bi-facebook" viewBox="0 0 16 16">
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+              </svg>
+            </a>
+            <!--Instagram-->
+            <a href="https://www.instagram.com/jedadriannn/" class="text-gray-500 hover:text-indigo-400 no-underline">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="currentColor"
+                class="bi bi-instagram" viewBox="0 0 16 16">
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+              </svg>
+            </a>
+            <a href="https://twitter.com/jedadriannn" class="text-gray-500 hover:text-indigo-400 no-underline">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" class="bi bi-twitter"
+                viewBox="0 0 16 16">
+                <path
+                  d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+              </svg>
+            </a>
+          </div>
         </div>
-        <div
-          class=" tracking-wide leading-9 flex content-center items-center md:text-lg md:leading-loose text-white px-8 py-7 rounded-xl select-none"
-          style="background-color: #7876f7;">
-          <p>I am <b>Jed Adrian Denosta</b>, a sophomore student from West Visayas State University taking Bachelor of
-            Science in Computer Science. I love to work with User Interfaces design likewise to User Experience to
-            uphold a strong experience for the users, and I deem that it brings greatness to the interface of the
-            particular product also brings a sense of encouragement to one user and another. Web Development has been
-            also my peek of interest that it aids a complex problem into simpler one that its connects a tons of user in
-            the internet. Lastly, I am a photographer that co-founded the DC Portraitures that aims to give quality
-            assurance to clients and satisfied result.</p>
+        
+        <div class="bg-white rounded-md md:rounded-2xl shadow-xl w-full h-full relative m-auto space-y-8 p-5 md:col-span-2 md:place-content-start">
+          <h1 class="text-indigo-500 text-2xl font-extrabold">My Story</h1>
+          <div class="text-gray-600 space-y-6">
+            <p>
+
+I love to work with User Interfaces design likewise to User Experience to uphold a strong experience for the users, and I deem that it brings greatness to the interface of the particular product also brings a sense of encouragement to one user and another. Web Development has been also my peek of interest in that it aids a complex problem into a simpler one that it connects tons of users on the internet. Lastly, I am a photographer that co-founded the DC Portraitures that aims to give quality assurance to clients and satisfying result.
+            </p>
+            <p>
+              Having worked freelance in multiple user interface projects, I knew the pain of designing without prior business and user knowledge. Often, I presented my final design to the upper management and received never-ending feedback and iterations. 
+            </p>
+            <p>
+              Having worked freelance in multiple user interface projects, I knew the pain of designing without prior business and user knowledge. Often, I presented my final design to the upper management and received never-ending feedback and iterations. 
+            </p>
+            <p>
+              Having worked freelance in multiple user interface projects, I knew the pain of designing without prior business and user knowledge. Often, I presented my final design to the upper management and received never-ending feedback and iterations. 
+            </p>
+            <p>
+              Having worked freelance in multiple user interface projects, I knew the pain of designing without prior business and user knowledge. Often, I presented my final design to the upper management and received never-ending feedback and iterations. 
+            </p>
+          </div>
         </div>
 
       </div>
@@ -166,6 +217,7 @@
         px-14
         py-14
         sm:p-20
+        relative
         bottom-0
         lg:px-32 lg:flex lg:flex-col lg:justify-center
       " style="background: #262961">
@@ -177,23 +229,23 @@
           </h1>
           <!--Facebook-->
           <div class="flex flex-row space-x-5">
-            <a href="https://www.facebook.com/jedadrian.denosta">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="#ffffff"
+            <a href="https://www.facebook.com/jedadrian.denosta" class="text-gray-300 hover:text-white no-underline">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="currentColor"
                 class="bi bi-facebook" viewBox="0 0 16 16">
                 <path
                   d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
               </svg>
             </a>
             <!--Instagram-->
-            <a href="https://www.instagram.com/jedadriannn/">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="#ffffff"
+            <a href="https://www.instagram.com/jedadriannn/" class="text-gray-300 hover:text-white no-underline">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="currentColor"
                 class="bi bi-instagram" viewBox="0 0 16 16">
                 <path
                   d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
               </svg>
             </a>
-            <a href="https://twitter.com/jedadriannn">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="#ffffff" class="bi bi-twitter"
+            <a href="https://twitter.com/jedadriannn" class="text-gray-300 hover:text-white no-underline">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" class="bi bi-twitter"
                 viewBox="0 0 16 16">
                 <path
                   d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
@@ -202,45 +254,39 @@
           </div>
         </div>
         <div class="text-white no-underline flex flex-col space-y-1">
-          <h1 class="text-sm font-light md:text-base" style="color: #cbc9c9">
+          <h1 class="text-sm font-light md:text-base" style="color: #ffffff">
             Services
           </h1>
-          <a href="" class="
+          <a href="#" class="
               text-base
               md:text-lg
-              text-white
-              no-underline
-              cursor-not-allowed
+              text-gray-400 hover:text-white no-underline
             ">
             Photography
           </a>
-          <a href="" class="
+          <a href="#" class="
               text-base
               md:text-lg
-              text-white
-              no-underline
-              cursor-not-allowed
+              text-gray-400 hover:text-white no-underline
             ">
             UX and UI Design
           </a>
-          <a href="" class="
+          <a href="#" class="
               text-base
               md:text-lg
-              text-white
-              no-underline
-              cursor-not-allowed
+              text-gray-400 hover:text-white no-underline
             ">
             Web Development
           </a>
         </div>
         <div class="text-white no-underline flex flex-col space-y-1">
-          <h1 class="text-sm font-light md:text-base" style="color: #cbc9c9">
+          <h1 class="text-sm font-light md:text-base" style="color: #ffffff">
             More
           </h1>
-          <a href="#portfolio" class="text-base md:text-lg text-white no-underline">
+          <a href="#portfolio" class="text-base md:text-lg text-gray-400 hover:text-white no-underline">
             Portfolio
           </a>
-          <a href="about.html" class="text-base md:text-lg text-white no-underline">
+          <a href="about.html" class="text-base md:text-lg text-gray-400 hover:text-white no-underline">
             About
           </a>
         </div>

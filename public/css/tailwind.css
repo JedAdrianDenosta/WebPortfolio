@@ -22650,7 +22650,7 @@ video {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-.font-main {
+.font-body {
   font-family: IBM Plex Sans;
 }
 
@@ -54773,7 +54773,7 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
-  .sm\:font-main {
+  .sm\:font-body {
     font-family: IBM Plex Sans;
   }
 
@@ -86532,7 +86532,7 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
-  .md\:font-main {
+  .md\:font-body {
     font-family: IBM Plex Sans;
   }
 
@@ -118291,7 +118291,7 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
-  .lg\:font-main {
+  .lg\:font-body {
     font-family: IBM Plex Sans;
   }
 
@@ -150050,7 +150050,7 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
-  .xl\:font-main {
+  .xl\:font-body {
     font-family: IBM Plex Sans;
   }
 
@@ -181809,7 +181809,7 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
-  .\32xl\:font-main {
+  .\32xl\:font-body {
     font-family: IBM Plex Sans;
   }
 

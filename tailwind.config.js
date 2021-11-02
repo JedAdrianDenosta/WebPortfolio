@@ -17,7 +17,7 @@ module.exports = {
         
       },
       fontFamily: {
-        main: ['IBM Plex Sans']
+        body: ['IBM Plex Sans']
       }
     },
   },
